@@ -11,6 +11,7 @@ export default async function decorate(block) {
       throw new Error(`API returned ${response.status}`);
     }
     const data = await response.json();
+	console.log(data);
 	
 	const container = document.createElement('div');
 	data.items.forEach( (item) => {
