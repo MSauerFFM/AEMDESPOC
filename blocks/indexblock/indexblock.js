@@ -1,6 +1,7 @@
 export default async function decorate(block) {
     const config = readBlockConfig(block);
 	const indexUrl = config.pathtoindex;
+	block.innerHTML = '';
 	
 	// Fetch data from the API.
     const response = await fetch(indexUrl);
