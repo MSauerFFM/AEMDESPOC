@@ -11,7 +11,7 @@ export default async function decorate(block) {
     const data = await response.json();
 	
 	const container = document.createElement('div');
-	data.forEach( (item) =>
+	data.forEach( (item) => {
 		const titleDiv = document.createElement('div');
 		titleDiv.textContent = '${item.title}';
 		container.appendChild(titleDiv);
@@ -23,6 +23,7 @@ export default async function decorate(block) {
 		const picture = document.createElement('img');
 		picture.src = '{item.image}';
 		container.appendChild(picture);
+	}
 	)
 	block.appendChild(container);
 }
