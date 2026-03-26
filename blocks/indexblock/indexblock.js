@@ -16,15 +16,15 @@ export default async function decorate(block) {
 	const container = document.createElement('div');
 	data.data.forEach( (item) => {
 		const titleDiv = document.createElement('div');
-		titleDiv.textContent = '${item.title}';
+		titleDiv.textContent = item.title;
 		container.appendChild(titleDiv);
 		
 		const descriptionDiv = document.createElement('div');
-		descriptionDiv.textContent = '${item.description}';
+		descriptionDiv.textContent = item.description;
 		container.appendChild(descriptionDiv);
 		
 		const picture = document.createElement('img');
-		picture.src = '{item.image}';
+		picture.src = item.image;
 		container.appendChild(picture);
 	}
 	)
