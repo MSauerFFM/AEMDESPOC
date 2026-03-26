@@ -14,7 +14,7 @@ export default async function decorate(block) {
 	console.log(data);
 	
 	const container = document.createElement('div');
-	data.items.forEach( (item) => {
+	data.data.forEach( (item) => {
 		const titleDiv = document.createElement('div');
 		titleDiv.textContent = '${item.title}';
 		container.appendChild(titleDiv);
